@@ -20,4 +20,3 @@ print("%s is string, %d is int, %f is float" % ("jun", 123, 0.1123))
 
 print("Test1: {0: 5d}, Price{1: 4.2f}". format(123, 1234.123))
 print("Test1: {a: 5d}, Price{b: 4.2f}". format(a=123, b=1234.123))
-
