@@ -2,7 +2,7 @@
 # 문자열 연산 및 슬라이싱
 
 str1 = 'Hello'
-str2 = "I am boy."
+str2 = "I am a boy."
 
 print(len(str1), len(str2))
 
