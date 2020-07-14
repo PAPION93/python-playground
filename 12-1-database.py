@@ -46,5 +46,5 @@ c.executemany("INSERT INTO users (id, username, email, phone, website, regdate) 
 # rollback
 # conn.rollback()
 
-# 접속
+# 접속해제
 conn.close()
