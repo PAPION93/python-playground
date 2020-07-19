@@ -27,10 +27,23 @@ a {
 
 .container {
   max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.container-float {
+  max-width: 1400px;
   background: red;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
+}
+
+.container-float::after {
+  display: blcok;
+  content: "";
+  clear: both;
 }
 
 .logo {
@@ -73,11 +86,17 @@ a {
 }
 
 .hero-section {
-  background: aqua;
+  text-align: center;
+  padding: 50px 0;
+  border-bottom: 1px solid #cfe3dc;
+}
+
+.intro-desc {
+  margin: 40px auto 40px;
 }
 
 .main-content {
-  background: blue;
+  background: pink;
   float: left;
   width: 70%;
 }
@@ -99,4 +118,5 @@ a {
 
 .footer {
   background: purple;
+  clear: both;
 }
