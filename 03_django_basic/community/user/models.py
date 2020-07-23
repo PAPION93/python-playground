@@ -6,6 +6,8 @@ from django.db import models
 class UserCustom(models.Model):
     username = models.CharField(max_length=32,
                                 verbose_name='사용자명')
+    useremail = models.EmailField(max_length=128,
+                                  verbose_name='사용자이메일')
     password = models.CharField(max_length=64,
                                 verbose_name='비밀번호')
     registerd_dttm = models.DateTimeField(auto_now_add=True,
@@ -15,6 +17,6 @@ class UserCustom(models.Model):
         return self.username
 
     class Meta:
-        db_table = 'user_custom'
+        db_table = 'custom_user'
         verbose_name = '사용자 커스텀'
         verbose_name_plural = '사용자 커스텀'
