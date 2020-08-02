@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'board',  # add app
-    'user'
+    'user',
+    'tag',
 ]
 
 MIDDLEWARE = [

@@ -4,6 +4,7 @@ from django.core.paginator import Paginator
 from .models import Board
 from .forms import BoardForm
 from user.models import UserCustom
+from tag.models import Tag
 # Create your views here.
 
 
@@ -42,6 +43,14 @@ def board_write(request):
             board.contents = form.cleaned_data['contents']
             board.writer = user
             board.save()
+
+            tags = form.cleaned_data['tags'].split(',')
+            for tag in tags:
+                if not tag:
+                    continue
+
+                _tag, _ = Tag.objects.get_or_create(name=tag)
+                board.tags.add(_tag)
 
             return redirect('/board/list/')
     else:
